@@ -23,7 +23,18 @@ export const store = new Vuex.Store({
       state.ingredients = val;
     },
     setBrews (state, val) {
-      state.brews = val;
+      if (val) {
+        state.brews = val;
+      } else {
+        state.brews = [];
+      }
+    },
+    setHiddenBrews (state, val) {
+      if (!state.hiddenbrews.some(x => x.id === val.id)) {
+        state.hiddenbrews.unshift(val);
+      } else {
+        state.hiddenBrews = [];
+      }
     }
   },
   actions: {
