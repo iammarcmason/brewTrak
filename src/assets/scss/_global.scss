@@ -173,16 +173,16 @@ section {
 
 form {
   label {
-    display: inline;
+    display: block;
     font-size: 16px;
     margin-bottom: 0.5rem;
   }
 
   input {
     display: inline-block;
-
+    width: fill;
     margin-bottom: 1rem;
-    font-size: 16px;
+    font-size: 15px;
     padding: 10px;
     outline: 0;
     border: 1px solid #e6ecf0;
